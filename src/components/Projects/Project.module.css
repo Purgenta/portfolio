@@ -1,0 +1,43 @@
+@import url("../../variables.module.css");
+.image-wrapper > img,
+.github-logo__wrapper > img {
+  max-width: 100%;
+}
+.image-wrapper {
+  border-radius: 1rem;
+}
+.project-title {
+  font-size: 2rem;
+  font-weight: 600;
+  flex-grow: 1;
+}
+.about-project,
+.project-wrapper,
+.technologies-used,
+.github-logo__wrapper {
+  display: flex;
+}
+.about-project {
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1rem;
+  gap: 1.5rem;
+}
+.project-description {
+  color: var(--secondary-text-color);
+  font-size: 1.2rem;
+}
+.technologies-used {
+  display: flex;
+  gap: 0.8rem;
+}
+.technology-item {
+  color: var(--main-highlight-bright-color);
+}
+.github-logo__wrapper {
+  justify-content: center;
+  align-items: center;
+}
+.github-logo__wrapper > img {
+  height: 2rem;
+}

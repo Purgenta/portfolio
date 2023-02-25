@@ -1,0 +1,33 @@
+@import url("../../variables.module.css");
+.nav-link {
+  font-family: var(--secondary-font-family);
+}
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+.main-nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  color: var(--main-nav-link-color);
+}
+.dev-name {
+  font-family: var(--secondary-font-family);
+  color: rgb(230, 230, 230);
+}
+.active-link {
+  color: var(--main-highlight-color);
+}
+.resume {
+  border: 1px solid var(--main-highlight-color);
+  box-shadow: 3px 4px 0px 0px;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}

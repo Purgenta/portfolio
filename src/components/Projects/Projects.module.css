@@ -1,0 +1,31 @@
+@import url("../../variables.module.css");
+.projects {
+  margin-top: 5rem;
+  width: 100%;
+  transition: all 0.7s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.my-projects {
+  display: flex;
+  margin: 2rem 0rem;
+  font-size: 2rem;
+}
+.project-list {
+  display: flex;
+  justify-content: start;
+}
+.project-item {
+  max-width: 500px;
+  border: 1px solid rgb(161, 161, 161);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  box-shadow: 2px 2px 2px black;
+}
+@media screen and (min-width: 1000px) {
+  .my-projects {
+    margin-right: 10rem;
+  }
+}
