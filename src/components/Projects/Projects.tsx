@@ -1,14 +1,19 @@
 import style from "./Projects.module.css";
-import { motion, Variants } from "framer-motion";
 import animeListPicture from "../../assets/AnimeList.png";
 import Project from "./Project";
 import { ProjectProps } from "./Project";
-const variants: Variants = {
+import { motion, Variants } from "framer-motion";
+const projectVariant: Variants = {
   initial: {
     opacity: 0,
+    x: "-10vw",
   },
-  visible: {
+  whileInView: {
     opacity: 1,
+    x: "0vw",
+    transition: {
+      damping: 200,
+    },
   },
 };
 type Technologies =
@@ -24,6 +29,7 @@ const projects: ProjectProps[] = [
     repositoryLink: "https://github.com/Purgenta/animeList",
     projectTitle: "Anime List",
     projectDescription: "A remake of a popular website called MyAnimeList",
+    livePreview: `https://tranquil-starburst-d562fc.netlify.app/`,
     id: 1,
     backgroundImageSrc: animeListPicture,
   },
@@ -31,7 +37,14 @@ const projects: ProjectProps[] = [
 const Projects = () => {
   const projectItemsDisplay = projects.map((project) => {
     return (
-      <li key={project.id} className={style["project-item"]}>
+      <motion.li
+        viewport={{ once: true, amount: 0.35 }}
+        variants={projectVariant}
+        initial="initial"
+        whileInView="whileInView"
+        key={project.id}
+        className={style["project-item"]}
+      >
         <Project
           projectDescription={project.projectDescription}
           projectTitle={project.projectTitle}
@@ -39,22 +52,18 @@ const Projects = () => {
           backgroundImageSrc={project.backgroundImageSrc}
           technologiesUsed={project.technologiesUsed}
           repositoryLink={project.repositoryLink}
+          livePreview={project.livePreview}
         ></Project>
-      </li>
+      </motion.li>
     );
   });
   return (
-    <motion.section
-      variants={variants}
-      initial="initial"
-      whileInView="visible"
-      className={style["projects"]}
-    >
+    <section id="projects" className={style["projects"]}>
       <h2 className={style["my-projects"]}>
         These are the projects I've been working on thus far
       </h2>
       <ul className={style["project-list"]}>{projectItemsDisplay}</ul>
-    </motion.section>
+    </section>
   );
 };
 

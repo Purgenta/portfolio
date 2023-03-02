@@ -39,5 +39,9 @@
   align-items: center;
 }
 .github-logo__wrapper > img {
-  height: 2rem;
+  height: 3rem;
+}
+.links-wrapper {
+  display: flex;
+  gap: 0.5rem;
 }

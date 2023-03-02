@@ -1,0 +1,38 @@
+@import url("../../variables.module.css");
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  right: 2%;
+  z-index: 5;
+}
+.bottom-line {
+  height: 12rem;
+  width: 0.1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.contact-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 1000px) {
+  .bottom-line {
+    width: 12rem;
+    height: 0.1rem;
+  }
+  .contact {
+    margin-top: 4rem;
+    position: static;
+    display: block;
+  }
+  .contact-links {
+    flex-direction: row;
+  }
+}

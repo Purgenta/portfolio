@@ -1,6 +1,6 @@
 @import url("../../variables.module.css");
 .projects {
-  margin-top: 5rem;
+  margin-top: 3rem;
   width: 100%;
   transition: all 0.7s;
   display: flex;

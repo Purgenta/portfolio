@@ -1,5 +1,7 @@
 import style from "./Project.module.css";
-import gitHubLogo from "../../assets/gitHubLogo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 type Technologies =
   | "HTML"
   | "CSS"
@@ -13,6 +15,7 @@ export type ProjectProps = {
   projectTitle: string;
   repositoryLink: string;
   projectDescription: string;
+  livePreview?: string;
   id: number;
 };
 const Project = ({
@@ -21,6 +24,7 @@ const Project = ({
   projectDescription,
   technologiesUsed,
   repositoryLink,
+  livePreview,
 }: ProjectProps) => {
   const technologiesDisplay = technologiesUsed.map((value, key) => {
     return (
@@ -37,13 +41,29 @@ const Project = ({
       <div className={style["about-project"]}>
         <div className={style["project-wrapper"]}>
           <h3 className={style["project-title"]}>{projectTitle}</h3>
-          <a
-            href={repositoryLink}
-            target="_blank"
-            className={style["github-logo__wrapper"]}
-          >
-            <img alt="github" src={gitHubLogo}></img>
-          </a>
+          <div className={style["links-wrapper"]}>
+            <a
+              href={repositoryLink}
+              aria-label="project repository link"
+              target="_blank"
+              className={style["github-logo__wrapper"]}
+            >
+              <FontAwesomeIcon size="xl" icon={faGithub}></FontAwesomeIcon>
+            </a>
+            {livePreview && (
+              <a
+                href={livePreview}
+                aria-label="project live preview"
+                target="_blank"
+                className={style["github-logo__wrapper"]}
+              >
+                <FontAwesomeIcon
+                  size="xl"
+                  icon={faArrowUpRightFromSquare}
+                ></FontAwesomeIcon>
+              </a>
+            )}
+          </div>
         </div>
         <p className={style["project-description"]}>{projectDescription}</p>
         <ul className={style["technologies-used"]}>{technologiesDisplay}</ul>

@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500&display=swap");
+html {
+  scroll-behavior: smooth;
+}
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -16,6 +19,9 @@ body {
   color: #f2f2f2;
 }
 .main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -24,6 +30,7 @@ body {
 #root {
   margin-top: 7rem;
   padding: 0rem 1rem;
+  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,4 +42,14 @@ a {
 }
 ul {
   list-style-type: none;
+}
+#main-footer {
+  border: 1px solid #f2f2f2;
+  padding: 2rem 0rem;
+  border-left: none;
+  border-right: none;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

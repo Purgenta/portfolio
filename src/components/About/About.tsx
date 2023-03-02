@@ -57,6 +57,7 @@ const About = () => {
   });
   return (
     <motion.section
+      id="about"
       variants={variants}
       initial="initial"
       animate="visible"
