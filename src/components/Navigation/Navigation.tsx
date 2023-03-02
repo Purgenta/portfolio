@@ -30,6 +30,7 @@ const Navigation = () => {
         </div>
       </div>
       <button
+        aria-label="toggle-menu"
         onClick={() => setNavActive((prev) => !prev)}
         className={`${style["hamburger"]} ${navActive ? style["active"] : ""}`}
       >
