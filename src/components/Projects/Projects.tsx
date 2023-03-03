@@ -1,5 +1,5 @@
 import style from "./Projects.module.css";
-import animeListPicture from "../../assets/AnimeList.png";
+import animeListPicture from "../../assets/AnimeList.webp";
 import Project from "./Project";
 import { ProjectProps } from "./Project";
 import { motion, Variants } from "framer-motion";
@@ -59,9 +59,9 @@ const Projects = () => {
   });
   return (
     <section id="projects" className={style["projects"]}>
-      <h2 className={style["my-projects"]}>
+      <h3 className={style["my-projects"]}>
         These are the projects I've been working on thus far
-      </h2>
+      </h3>
       <ul className={style["project-list"]}>{projectItemsDisplay}</ul>
     </section>
   );

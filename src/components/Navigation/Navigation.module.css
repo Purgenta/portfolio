@@ -44,13 +44,12 @@
 }
 .hamburger {
   border: none;
-  background-color: var(--main-color);
+  background-color: transparent;
   display: none;
   flex-direction: column;
   gap: 0.4rem;
   align-items: flex-end;
   justify-content: center;
-  z-index: 50;
   overflow: hidden;
 }
 div.active {

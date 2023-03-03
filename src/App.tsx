@@ -6,10 +6,12 @@ import Projects from "./components/Projects/Projects";
 import { createPortal } from "react-dom";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import Particle from "./components/Particle/Particle";
 const App = () => {
   return (
     <>
       {createPortal(<Navigation></Navigation>, header)}
+      <Particle></Particle>
       <About></About>
       <Projects></Projects>
       <Contact></Contact>

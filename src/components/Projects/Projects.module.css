@@ -11,7 +11,7 @@
 .my-projects {
   display: flex;
   margin: 2rem 0rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 .project-list {
   display: flex;
@@ -20,6 +20,7 @@
 .project-item {
   max-width: 500px;
   border: 1px solid rgb(161, 161, 161);
+  background-color: var(--main-color);
   border-radius: 0.8rem;
   padding: 1rem;
   box-shadow: 2px 2px 2px black;

@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500&display=swap");
 html {
   scroll-behavior: smooth;
+  font-size: calc(12px + 0.390625vw);
 }
 * {
   box-sizing: border-box;
@@ -52,4 +53,10 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.particles-underlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -4;
 }
